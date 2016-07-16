@@ -1,0 +1,9 @@
+<ExcelList>
+	<Excel File = ".\Excel\Class.xlsx">
+		<Sheet Name = "Class" Namespace = "Instance"/>
+	</Excel>
+
+	<Excel File = ".\Excel\Tendency.xlsx">
+		<Sheet Name = "Tendency" Namespace = "Instance"/>
+	</Excel>
+</ExcelList>

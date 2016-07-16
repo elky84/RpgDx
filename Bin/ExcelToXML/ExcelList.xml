@@ -1,0 +1,22 @@
+<ExcelList>
+	<Excel File = ".\Excel\Class.xlsx">
+		<Sheet Name = "Class" Key = "Index"/>
+	</Excel>
+
+	<Excel File = ".\Excel\Image.xlsx">
+		<Sheet Name = "Image" Key = "Index"/>
+	</Excel>
+
+	<Excel File = ".\Excel\Tribe.xlsx">
+		<Sheet Name = "Tribe" Key = "Index"/>
+	</Excel> 
+
+	<Excel File = ".\Excel\TendencyTest.xlsx">
+		<Sheet Name = "TendencyTest" Key = "Index"/>
+	</Excel> 
+
+	<Excel File = ".\Excel\Name.xlsx">
+		<Sheet Name = "Name" Key = "Index"/>
+	</Excel> 
+
+</ExcelList>

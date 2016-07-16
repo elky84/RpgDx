@@ -1,0 +1,5 @@
+<ExcelList>
+	<Excel File = ".\Excel\TendencyType.xlsx">
+		<Sheet Name = "TendencyType" Namespace = "Enum"/>
+	</Excel>
+</ExcelList>
