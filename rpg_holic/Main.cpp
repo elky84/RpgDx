@@ -28,7 +28,7 @@ bool Main::initialize()
 		return false;
 	}
 
-    if (FALSE == m_direct_x.LoadFont(_T("Arita-medium.ttf")))
+    if (FALSE == m_direct_x.LoadFont(L"NanumBarunGothic.ttf"))
     {
 		LOG_ERROR(_T("DirectX::LoadFont() Failed"));
 		return false;

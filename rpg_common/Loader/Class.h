@@ -8,7 +8,7 @@ class Class
 public:
 	Class()
 	{
-		memset(&m_kitely, 0, sizeof(m_kitely));
+		memset(&m_Wisely, 0, sizeof(m_Wisely));
 
 		memset(&m_Wis_Min, 0, sizeof(m_Wis_Min));
 
@@ -33,8 +33,6 @@ public:
 		memset(&m_Phy_Min, 0, sizeof(m_Phy_Min));
 
 		memset(&m_Phy_Max, 0, sizeof(m_Phy_Max));
-
-		memset(&m_Name, 0, sizeof(m_Name));
 
 		memset(&m_Luck_Min, 0, sizeof(m_Luck_Min));
 
@@ -68,19 +66,19 @@ public:
 
 	}
 
-	int& kitelyReference()
+	int& WiselyReference()
 	{
-		return m_kitely;
+		return m_Wisely;
 	}
 
-	int kitely() const
+	int Wisely() const
 	{
-		return m_kitely;
+		return m_Wisely;
 	}
 
-	void kitely(const int& _kitely)
+	void Wisely(const int& _Wisely)
 	{
-		m_kitely = _kitely;
+		m_Wisely = _Wisely;
 	}
 
 	int& Wis_MinReference()
@@ -504,7 +502,7 @@ public:
 	}
 
 private:
-	int m_kitely;
+	int m_Wisely;
 	int m_Wis_Min;
 	int m_Wis_Max;
 	int m_Thoughtful;
@@ -542,196 +540,196 @@ public:
 	{
 		Class Instance;
 		light::XMLParser parser;
-		light::ScopeProfiler profiler(__FUNCTIONW__, 10, _T("./XML/Class.XML"));
-		if( false == parser.read_file(_T("./XML/Class.XML")))
+		light::ScopeProfiler profiler(__FUNCTIONW__, 10, L"./XML/Class.XML");
+		if( false == parser.read_file(L"./XML/Class.XML"))
 		{
-			LOG_ERROR(_T("%s, Open() Failed. Path(./XML/Class.XML"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, Open() Failed. Path(./XML/Class.XML");
 			return false;
 		}
 
-		if ( false == parser.execute(_T("/ClassList")))
+		if ( false == parser.execute(L"/ClassList"))
 		{
-			LOG_ERROR(_T("%s, execute() Failed. /ClassList"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, execute() Failed. /ClassList");
 			return false;
 		}
 
-		if ( false == parser.bind_elem(_T("Data")))
+		if ( false == parser.bind_elem(L"Data"))
 		{
-			LOG_ERROR(_T("%s, execute() Failed. Data"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, execute() Failed. Data");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Aggressive"), Instance.AggressiveReference()))
+		if ( false == parser.bind_attrib(L"Aggressive", Instance.AggressiveReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.AggressiveReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.AggressiveReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Agi_Max"), Instance.Agi_MaxReference()))
+		if ( false == parser.bind_attrib(L"Agi_Max", Instance.Agi_MaxReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Agi_MaxReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Agi_MaxReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Agi_Min"), Instance.Agi_MinReference()))
+		if ( false == parser.bind_attrib(L"Agi_Min", Instance.Agi_MinReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Agi_MinReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Agi_MinReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Ambition"), Instance.AmbitionReference()))
+		if ( false == parser.bind_attrib(L"Ambition", Instance.AmbitionReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.AmbitionReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.AmbitionReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Dex_Max"), Instance.Dex_MaxReference()))
+		if ( false == parser.bind_attrib(L"Dex_Max", Instance.Dex_MaxReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Dex_MaxReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Dex_MaxReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Dex_Min"), Instance.Dex_MinReference()))
+		if ( false == parser.bind_attrib(L"Dex_Min", Instance.Dex_MinReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Dex_MinReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Dex_MinReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Godliness"), Instance.GodlinessReference()))
+		if ( false == parser.bind_attrib(L"Godliness", Instance.GodlinessReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.GodlinessReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.GodlinessReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Hp_Max"), Instance.Hp_MaxReference()))
+		if ( false == parser.bind_attrib(L"Hp_Max", Instance.Hp_MaxReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Hp_MaxReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Hp_MaxReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Hp_Min"), Instance.Hp_MinReference()))
+		if ( false == parser.bind_attrib(L"Hp_Min", Instance.Hp_MinReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Hp_MinReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Hp_MinReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Index"), Instance.IndexReference()))
+		if ( false == parser.bind_attrib(L"Index", Instance.IndexReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.IndexReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.IndexReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Initiative"), Instance.InitiativeReference()))
+		if ( false == parser.bind_attrib(L"Initiative", Instance.InitiativeReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.InitiativeReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.InitiativeReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Int_Max"), Instance.Int_MaxReference()))
+		if ( false == parser.bind_attrib(L"Int_Max", Instance.Int_MaxReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Int_MaxReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Int_MaxReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Int_Min"), Instance.Int_MinReference()))
+		if ( false == parser.bind_attrib(L"Int_Min", Instance.Int_MinReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Int_MinReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Int_MinReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Luck_Max"), Instance.Luck_MaxReference()))
+		if ( false == parser.bind_attrib(L"Luck_Max", Instance.Luck_MaxReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Luck_MaxReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Luck_MaxReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Luck_Min"), Instance.Luck_MinReference()))
+		if ( false == parser.bind_attrib(L"Luck_Min", Instance.Luck_MinReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Luck_MinReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Luck_MinReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Name"), Instance.NameReference()))
+		if ( false == parser.bind_attrib(L"Name", Instance.NameReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.NameReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.NameReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Phy_Max"), Instance.Phy_MaxReference()))
+		if ( false == parser.bind_attrib(L"Phy_Max", Instance.Phy_MaxReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Phy_MaxReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Phy_MaxReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Phy_Min"), Instance.Phy_MinReference()))
+		if ( false == parser.bind_attrib(L"Phy_Min", Instance.Phy_MinReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Phy_MinReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Phy_MinReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Speed_Max"), Instance.Speed_MaxReference()))
+		if ( false == parser.bind_attrib(L"Speed_Max", Instance.Speed_MaxReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Speed_MaxReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Speed_MaxReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Speed_Min"), Instance.Speed_MinReference()))
+		if ( false == parser.bind_attrib(L"Speed_Min", Instance.Speed_MinReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Speed_MinReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Speed_MinReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("StatSum"), Instance.StatSumReference()))
+		if ( false == parser.bind_attrib(L"StatSum", Instance.StatSumReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.StatSumReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.StatSumReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Str_Max"), Instance.Str_MaxReference()))
+		if ( false == parser.bind_attrib(L"Str_Max", Instance.Str_MaxReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Str_MaxReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Str_MaxReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Str_Min"), Instance.Str_MinReference()))
+		if ( false == parser.bind_attrib(L"Str_Min", Instance.Str_MinReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Str_MinReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Str_MinReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Talent"), Instance.TalentReference()))
+		if ( false == parser.bind_attrib(L"Talent", Instance.TalentReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TalentReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TalentReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("TendencySum"), Instance.TendencySumReference()))
+		if ( false == parser.bind_attrib(L"TendencySum", Instance.TendencySumReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TendencySumReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TendencySumReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Thoughtful"), Instance.ThoughtfulReference()))
+		if ( false == parser.bind_attrib(L"Thoughtful", Instance.ThoughtfulReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.ThoughtfulReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.ThoughtfulReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Wis_Max"), Instance.Wis_MaxReference()))
+		if ( false == parser.bind_attrib(L"Wis_Max", Instance.Wis_MaxReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Wis_MaxReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Wis_MaxReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Wis_Min"), Instance.Wis_MinReference()))
+		if ( false == parser.bind_attrib(L"Wis_Min", Instance.Wis_MinReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Wis_MinReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Wis_MinReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("kitely"), Instance.kitelyReference()))
+		if ( false == parser.bind_attrib(L"Wisely", Instance.WiselyReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.kitelyReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.WiselyReference()");
 			return false;
 		}
 
@@ -745,7 +743,7 @@ public:
 
 	bool Get(int& key, Class& Instance)
 	{
-		std::map<int, Class>::iterator it = m_Map.find(key);
+		auto it = m_Map.find(key);
 		{
 			return false;
 		}

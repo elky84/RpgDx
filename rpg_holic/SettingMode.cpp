@@ -109,7 +109,7 @@ void SettingMode::Logic()
 
 	if( light::Input::Keyboard::Pressing(VK_SPACE) )
 	{
-		m_PickCharacter = RM::CharacterFactory::Pick(m_direct_x);
+  		m_PickCharacter = RM::CharacterFactory::Pick(m_direct_x);
 		light::POSITION_INT position(GAME_UI_LEFT, GAME_UI_TOP);
 
 		auto& mapImage = light::excel::Loader::Instance()->find<ExcelData::ImageData>()->Map();

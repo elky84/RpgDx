@@ -1,1 +1,1 @@
-call Distribute_Header.bat "..\..\Rafmagn\RMCommon\Type\"
+call Distribute_Header.bat "..\..\rpg_common\Type\"

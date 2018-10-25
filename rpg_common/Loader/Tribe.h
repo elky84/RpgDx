@@ -8,15 +8,13 @@ class Tribe
 public:
 	Tribe()
 	{
-		memset(&m_kitely, 0, sizeof(m_kitely));
+		memset(&m_Wisely, 0, sizeof(m_Wisely));
 
 		memset(&m_Thoughtful, 0, sizeof(m_Thoughtful));
 
 		memset(&m_TendencySum, 0, sizeof(m_TendencySum));
 
 		memset(&m_Talent, 0, sizeof(m_Talent));
-
-		memset(&m_Name, 0, sizeof(m_Name));
 
 		memset(&m_Initiative, 0, sizeof(m_Initiative));
 
@@ -30,19 +28,19 @@ public:
 
 	}
 
-	int& kitelyReference()
+	int& WiselyReference()
 	{
-		return m_kitely;
+		return m_Wisely;
 	}
 
-	int kitely() const
+	int Wisely() const
 	{
-		return m_kitely;
+		return m_Wisely;
 	}
 
-	void kitely(const int& _kitely)
+	void Wisely(const int& _Wisely)
 	{
-		m_kitely = _kitely;
+		m_Wisely = _Wisely;
 	}
 
 	int& ThoughtfulReference()
@@ -181,7 +179,7 @@ public:
 	}
 
 private:
-	int m_kitely;
+	int m_Wisely;
 	int m_Thoughtful;
 	int m_TendencySum;
 	int m_Talent;
@@ -200,82 +198,82 @@ public:
 	{
 		Tribe Instance;
 		light::XMLParser parser;
-		light::ScopeProfiler profiler(__FUNCTIONW__, 10, _T("./XML/Tribe.XML"));
-		if( false == parser.read_file(_T("./XML/Tribe.XML")))
+		light::ScopeProfiler profiler(__FUNCTIONW__, 10, L"./XML/Tribe.XML");
+		if( false == parser.read_file(L"./XML/Tribe.XML"))
 		{
-			LOG_ERROR(_T("%s, Open() Failed. Path(./XML/Tribe.XML"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, Open() Failed. Path(./XML/Tribe.XML");
 			return false;
 		}
 
-		if ( false == parser.execute(_T("/TribeList")))
+		if ( false == parser.execute(L"/TribeList"))
 		{
-			LOG_ERROR(_T("%s, execute() Failed. /TribeList"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, execute() Failed. /TribeList");
 			return false;
 		}
 
-		if ( false == parser.bind_elem(_T("Data")))
+		if ( false == parser.bind_elem(L"Data"))
 		{
-			LOG_ERROR(_T("%s, execute() Failed. Data"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, execute() Failed. Data");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Aggressive"), Instance.AggressiveReference()))
+		if ( false == parser.bind_attrib(L"Aggressive", Instance.AggressiveReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.AggressiveReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.AggressiveReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Ambition"), Instance.AmbitionReference()))
+		if ( false == parser.bind_attrib(L"Ambition", Instance.AmbitionReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.AmbitionReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.AmbitionReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Godliness"), Instance.GodlinessReference()))
+		if ( false == parser.bind_attrib(L"Godliness", Instance.GodlinessReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.GodlinessReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.GodlinessReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Index"), Instance.IndexReference()))
+		if ( false == parser.bind_attrib(L"Index", Instance.IndexReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.IndexReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.IndexReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Initiative"), Instance.InitiativeReference()))
+		if ( false == parser.bind_attrib(L"Initiative", Instance.InitiativeReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.InitiativeReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.InitiativeReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Name"), Instance.NameReference()))
+		if ( false == parser.bind_attrib(L"Name", Instance.NameReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.NameReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.NameReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Talent"), Instance.TalentReference()))
+		if ( false == parser.bind_attrib(L"Talent", Instance.TalentReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TalentReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TalentReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("TendencySum"), Instance.TendencySumReference()))
+		if ( false == parser.bind_attrib(L"TendencySum", Instance.TendencySumReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TendencySumReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TendencySumReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Thoughtful"), Instance.ThoughtfulReference()))
+		if ( false == parser.bind_attrib(L"Thoughtful", Instance.ThoughtfulReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.ThoughtfulReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.ThoughtfulReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("kitely"), Instance.kitelyReference()))
+		if ( false == parser.bind_attrib(L"Wisely", Instance.WiselyReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.kitelyReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.WiselyReference()");
 			return false;
 		}
 
@@ -289,7 +287,7 @@ public:
 
 	bool Get(int& key, Tribe& Instance)
 	{
-		std::map<int, Tribe>::iterator it = m_Map.find(key);
+		auto it = m_Map.find(key);
 		{
 			return false;
 		}

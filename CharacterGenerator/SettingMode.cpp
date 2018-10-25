@@ -45,6 +45,8 @@ void SettingMode::Begin()
 		m_vectorTendencyTest.push_back(val.second);
 	}
 
+	m_Tendency.reset(new Instance::Tendency());
+
 	ResetTendencyTest();
 }
 
@@ -116,9 +118,6 @@ bool SettingMode::Answer(const light::view::Gui* pGuiButton)
 		break;
 	case Enum::TendencyType::Thoughtful:
 		m_Tendency->Thoughtful(m_Tendency->Thoughtful() + m_TendencyTest->VectorTendencyValue()[n]);
-		break;
-	case Enum::TendencyType::kitely:
-		m_Tendency->kitely(m_Tendency->kitely() + m_TendencyTest->VectorTendencyValue()[n]);
 		break;
 	case Enum::TendencyType::Godliness:
 		m_Tendency->Godliness(m_Tendency->Godliness() + m_TendencyTest->VectorTendencyValue()[n]);

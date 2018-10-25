@@ -14,8 +14,6 @@ public:
 
 		m_TendencyValue.resize(4);
 
-		memset(&m_Question, 0, sizeof(m_Question));
-
 		memset(&m_Index, 0, sizeof(m_Index));
 
 	}
@@ -140,106 +138,106 @@ public:
 	{
 		TendencyTest Instance;
 		light::XMLParser parser;
-		light::ScopeProfiler profiler(__FUNCTIONW__, 10, _T("./XML/TendencyTest.XML"));
-		if( false == parser.read_file(_T("./XML/TendencyTest.XML")))
+		light::ScopeProfiler profiler(__FUNCTIONW__, 10, L"./XML/TendencyTest.XML");
+		if( false == parser.read_file(L"./XML/TendencyTest.XML"))
 		{
-			LOG_ERROR(_T("%s, Open() Failed. Path(./XML/TendencyTest.XML"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, Open() Failed. Path(./XML/TendencyTest.XML");
 			return false;
 		}
 
-		if ( false == parser.execute(_T("/TendencyTestList")))
+		if ( false == parser.execute(L"/TendencyTestList"))
 		{
-			LOG_ERROR(_T("%s, execute() Failed. /TendencyTestList"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, execute() Failed. /TendencyTestList");
 			return false;
 		}
 
-		if ( false == parser.bind_elem(_T("Data")))
+		if ( false == parser.bind_elem(L"Data"))
 		{
-			LOG_ERROR(_T("%s, execute() Failed. Data"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, execute() Failed. Data");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Answer0"), Instance.Answer0Reference()))
+		if ( false == parser.bind_attrib(L"Answer0", Instance.Answer0Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Answer0Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Answer0Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Answer1"), Instance.Answer1Reference()))
+		if ( false == parser.bind_attrib(L"Answer1", Instance.Answer1Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Answer1Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Answer1Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Answer2"), Instance.Answer2Reference()))
+		if ( false == parser.bind_attrib(L"Answer2", Instance.Answer2Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Answer2Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Answer2Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Answer3"), Instance.Answer3Reference()))
+		if ( false == parser.bind_attrib(L"Answer3", Instance.Answer3Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.Answer3Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.Answer3Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Index"), Instance.IndexReference()))
+		if ( false == parser.bind_attrib(L"Index", Instance.IndexReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.IndexReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.IndexReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Question"), Instance.QuestionReference()))
+		if ( false == parser.bind_attrib(L"Question", Instance.QuestionReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.QuestionReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.QuestionReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("TendencyType0"), Instance.TendencyType0Reference()))
+		if ( false == parser.bind_attrib(L"TendencyType0", Instance.TendencyType0Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TendencyType0Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TendencyType0Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("TendencyType1"), Instance.TendencyType1Reference()))
+		if ( false == parser.bind_attrib(L"TendencyType1", Instance.TendencyType1Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TendencyType1Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TendencyType1Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("TendencyType2"), Instance.TendencyType2Reference()))
+		if ( false == parser.bind_attrib(L"TendencyType2", Instance.TendencyType2Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TendencyType2Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TendencyType2Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("TendencyType3"), Instance.TendencyType3Reference()))
+		if ( false == parser.bind_attrib(L"TendencyType3", Instance.TendencyType3Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TendencyType3Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TendencyType3Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("TendencyValue0"), Instance.TendencyValue0Reference()))
+		if ( false == parser.bind_attrib(L"TendencyValue0", Instance.TendencyValue0Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TendencyValue0Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TendencyValue0Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("TendencyValue1"), Instance.TendencyValue1Reference()))
+		if ( false == parser.bind_attrib(L"TendencyValue1", Instance.TendencyValue1Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TendencyValue1Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TendencyValue1Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("TendencyValue2"), Instance.TendencyValue2Reference()))
+		if ( false == parser.bind_attrib(L"TendencyValue2", Instance.TendencyValue2Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TendencyValue2Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TendencyValue2Reference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("TendencyValue3"), Instance.TendencyValue3Reference()))
+		if ( false == parser.bind_attrib(L"TendencyValue3", Instance.TendencyValue3Reference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.TendencyValue3Reference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.TendencyValue3Reference()");
 			return false;
 		}
 
@@ -253,7 +251,7 @@ public:
 
 	bool Get(int& key, TendencyTest& Instance)
 	{
-		std::map<int, TendencyTest>::iterator it = m_Map.find(key);
+		auto it = m_Map.find(key);
 		{
 			return false;
 		}

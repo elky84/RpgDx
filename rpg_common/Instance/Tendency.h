@@ -8,7 +8,7 @@ class Tendency
 public:
 	Tendency()
 	{
-		memset(&m_kitely, 0, sizeof(m_kitely));
+		memset(&m_Wisely, 0, sizeof(m_Wisely));
 
 		memset(&m_Thoughtful, 0, sizeof(m_Thoughtful));
 
@@ -24,17 +24,27 @@ public:
 
 	}
 
-	int& kitely()
+	int& WiselyReference()
 	{
-		return m_kitely;
+		return m_Wisely;
 	}
 
-	void kitely(const int& _kitely)
+	int Wisely() const
 	{
-		m_kitely = _kitely;
+		return m_Wisely;
 	}
 
-	int& Thoughtful()
+	void Wisely(const int& _Wisely)
+	{
+		m_Wisely = _Wisely;
+	}
+
+	int& ThoughtfulReference()
+	{
+		return m_Thoughtful;
+	}
+
+	int Thoughtful() const
 	{
 		return m_Thoughtful;
 	}
@@ -44,7 +54,12 @@ public:
 		m_Thoughtful = _Thoughtful;
 	}
 
-	int& Talent()
+	int& TalentReference()
+	{
+		return m_Talent;
+	}
+
+	int Talent() const
 	{
 		return m_Talent;
 	}
@@ -54,7 +69,12 @@ public:
 		m_Talent = _Talent;
 	}
 
-	int& Initiative()
+	int& InitiativeReference()
+	{
+		return m_Initiative;
+	}
+
+	int Initiative() const
 	{
 		return m_Initiative;
 	}
@@ -64,7 +84,12 @@ public:
 		m_Initiative = _Initiative;
 	}
 
-	int& Godliness()
+	int& GodlinessReference()
+	{
+		return m_Godliness;
+	}
+
+	int Godliness() const
 	{
 		return m_Godliness;
 	}
@@ -74,7 +99,12 @@ public:
 		m_Godliness = _Godliness;
 	}
 
-	int& Ambition()
+	int& AmbitionReference()
+	{
+		return m_Ambition;
+	}
+
+	int Ambition() const
 	{
 		return m_Ambition;
 	}
@@ -84,7 +114,12 @@ public:
 		m_Ambition = _Ambition;
 	}
 
-	int& Aggressive()
+	int& AggressiveReference()
+	{
+		return m_Aggressive;
+	}
+
+	int Aggressive() const
 	{
 		return m_Aggressive;
 	}
@@ -95,7 +130,7 @@ public:
 	}
 
 private:
-	int m_kitely;
+	int m_Wisely;
 	int m_Thoughtful;
 	int m_Talent;
 	int m_Initiative;
@@ -106,3 +141,4 @@ private:
 
 
 } // Instance
+

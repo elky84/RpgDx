@@ -15,4 +15,5 @@
 # rpg_holic
 win32 rpg game prototype.
 
-![rpg_holic](./rpg_holic.png)
+![rpg_holic_01](./rpg_holic_01.png)
+![rpg_holic_02](./rpg_holic_02.png)

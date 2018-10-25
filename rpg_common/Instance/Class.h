@@ -16,8 +16,6 @@ public:
 
 		memset(&m_Phy, 0, sizeof(m_Phy));
 
-		memset(&m_Name, 0, sizeof(m_Name));
-
 		memset(&m_Luck, 0, sizeof(m_Luck));
 
 		memset(&m_Int, 0, sizeof(m_Int));
@@ -32,7 +30,12 @@ public:
 
 	}
 
-	int& Wis()
+	int& WisReference()
+	{
+		return m_Wis;
+	}
+
+	int Wis() const
 	{
 		return m_Wis;
 	}
@@ -42,7 +45,12 @@ public:
 		m_Wis = _Wis;
 	}
 
-	int& Str()
+	int& StrReference()
+	{
+		return m_Str;
+	}
+
+	int Str() const
 	{
 		return m_Str;
 	}
@@ -52,7 +60,12 @@ public:
 		m_Str = _Str;
 	}
 
-	int& Speed()
+	int& SpeedReference()
+	{
+		return m_Speed;
+	}
+
+	int Speed() const
 	{
 		return m_Speed;
 	}
@@ -62,7 +75,12 @@ public:
 		m_Speed = _Speed;
 	}
 
-	int& Phy()
+	int& PhyReference()
+	{
+		return m_Phy;
+	}
+
+	int Phy() const
 	{
 		return m_Phy;
 	}
@@ -72,7 +90,12 @@ public:
 		m_Phy = _Phy;
 	}
 
-	std::wstring& Name()
+	std::wstring& NameReference()
+	{
+		return m_Name;
+	}
+
+	std::wstring Name() const
 	{
 		return m_Name;
 	}
@@ -82,7 +105,12 @@ public:
 		m_Name = _Name;
 	}
 
-	int& Luck()
+	int& LuckReference()
+	{
+		return m_Luck;
+	}
+
+	int Luck() const
 	{
 		return m_Luck;
 	}
@@ -92,7 +120,12 @@ public:
 		m_Luck = _Luck;
 	}
 
-	int& Int()
+	int& IntReference()
+	{
+		return m_Int;
+	}
+
+	int Int() const
 	{
 		return m_Int;
 	}
@@ -102,7 +135,12 @@ public:
 		m_Int = _Int;
 	}
 
-	int& Index()
+	int& IndexReference()
+	{
+		return m_Index;
+	}
+
+	int Index() const
 	{
 		return m_Index;
 	}
@@ -112,7 +150,12 @@ public:
 		m_Index = _Index;
 	}
 
-	int& Hp()
+	int& HpReference()
+	{
+		return m_Hp;
+	}
+
+	int Hp() const
 	{
 		return m_Hp;
 	}
@@ -122,7 +165,12 @@ public:
 		m_Hp = _Hp;
 	}
 
-	int& Dex()
+	int& DexReference()
+	{
+		return m_Dex;
+	}
+
+	int Dex() const
 	{
 		return m_Dex;
 	}
@@ -132,7 +180,12 @@ public:
 		m_Dex = _Dex;
 	}
 
-	int& Agi()
+	int& AgiReference()
+	{
+		return m_Agi;
+	}
+
+	int Agi() const
 	{
 		return m_Agi;
 	}
@@ -158,3 +211,4 @@ private:
 
 
 } // Instance
+

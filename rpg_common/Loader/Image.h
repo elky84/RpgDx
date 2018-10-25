@@ -8,8 +8,6 @@ class Image
 public:
 	Image()
 	{
-		memset(&m_Name, 0, sizeof(m_Name));
-
 		memset(&m_Index, 0, sizeof(m_Index));
 
 	}
@@ -56,34 +54,34 @@ public:
 	{
 		Image Instance;
 		light::XMLParser parser;
-		light::ScopeProfiler profiler(__FUNCTIONW__, 10, _T("./XML/Image.XML"));
-		if( false == parser.read_file(_T("./XML/Image.XML")))
+		light::ScopeProfiler profiler(__FUNCTIONW__, 10, L"./XML/Image.XML");
+		if( false == parser.read_file(L"./XML/Image.XML"))
 		{
-			LOG_ERROR(_T("%s, Open() Failed. Path(./XML/Image.XML"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, Open() Failed. Path(./XML/Image.XML");
 			return false;
 		}
 
-		if ( false == parser.execute(_T("/ImageList")))
+		if ( false == parser.execute(L"/ImageList"))
 		{
-			LOG_ERROR(_T("%s, execute() Failed. /ImageList"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, execute() Failed. /ImageList");
 			return false;
 		}
 
-		if ( false == parser.bind_elem(_T("Data")))
+		if ( false == parser.bind_elem(L"Data"))
 		{
-			LOG_ERROR(_T("%s, execute() Failed. Data"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, execute() Failed. Data");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Index"), Instance.IndexReference()))
+		if ( false == parser.bind_attrib(L"Index", Instance.IndexReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.IndexReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.IndexReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Name"), Instance.NameReference()))
+		if ( false == parser.bind_attrib(L"Name", Instance.NameReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.NameReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.NameReference()");
 			return false;
 		}
 
@@ -97,7 +95,7 @@ public:
 
 	bool Get(int& key, Image& Instance)
 	{
-		std::map<int, Image>::iterator it = m_Map.find(key);
+		auto it = m_Map.find(key);
 		{
 			return false;
 		}

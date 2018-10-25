@@ -8,11 +8,7 @@ class Name
 public:
 	Name()
 	{
-		memset(&m_LastName, 0, sizeof(m_LastName));
-
 		memset(&m_Index, 0, sizeof(m_Index));
-
-		memset(&m_FirstName, 0, sizeof(m_FirstName));
 
 	}
 
@@ -74,40 +70,40 @@ public:
 	{
 		Name Instance;
 		light::XMLParser parser;
-		light::ScopeProfiler profiler(__FUNCTIONW__, 10, _T("./XML/Name.XML"));
-		if( false == parser.read_file(_T("./XML/Name.XML")))
+		light::ScopeProfiler profiler(__FUNCTIONW__, 10, L"./XML/Name.XML");
+		if( false == parser.read_file(L"./XML/Name.XML"))
 		{
-			LOG_ERROR(_T("%s, Open() Failed. Path(./XML/Name.XML"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, Open() Failed. Path(./XML/Name.XML");
 			return false;
 		}
 
-		if ( false == parser.execute(_T("/NameList")))
+		if ( false == parser.execute(L"/NameList"))
 		{
-			LOG_ERROR(_T("%s, execute() Failed. /NameList"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, execute() Failed. /NameList");
 			return false;
 		}
 
-		if ( false == parser.bind_elem(_T("Data")))
+		if ( false == parser.bind_elem(L"Data"))
 		{
-			LOG_ERROR(_T("%s, execute() Failed. Data"), __FUNCTIONW__);
+			LOG_ERROR(L"%s, execute() Failed. Data");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("FirstName"), Instance.FirstNameReference()))
+		if ( false == parser.bind_attrib(L"FirstName", Instance.FirstNameReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.FirstNameReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.FirstNameReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("Index"), Instance.IndexReference()))
+		if ( false == parser.bind_attrib(L"Index", Instance.IndexReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.IndexReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.IndexReference()");
 			return false;
 		}
 
-		if ( false == parser.bind_attrib(_T("LastName"), Instance.LastNameReference()))
+		if ( false == parser.bind_attrib(L"LastName", Instance.LastNameReference()))
 		{
-			LOG_ERROR(_T("%s, bind_attrib() Failed. Instance.LastNameReference()"), __FUNCTIONW__);
+			LOG_ERROR(L"bind_attrib() Failed. Instance.LastNameReference()");
 			return false;
 		}
 
@@ -121,7 +117,7 @@ public:
 
 	bool Get(int& key, Name& Instance)
 	{
-		std::map<int, Name>::iterator it = m_Map.find(key);
+		auto it = m_Map.find(key);
 		{
 			return false;
 		}
