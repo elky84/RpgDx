@@ -12,7 +12,7 @@
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/elky84/rpg_holic.svg)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/elky84/rpg_holic.svg)
 
-# rpg_holic
+# rpg-holic
 win32 rpg game prototype.
 
 ![rpg_holic_01](./rpg_holic_01.png)
